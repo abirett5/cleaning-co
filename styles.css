@@ -1,0 +1,1446 @@
+/* Import Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ==================================
+-- Reset Settings
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav .container .nav-menu ul li a {
+    text-transform: capitalize;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+
+/* ==================================
+-- Variables
+================================== */
+
+:root {
+    --primary-color: #2B8761;
+    --primary-dark-color: #236e4f;
+    --nav-background-color: #fcfcfc;
+    --white: #ffffff;
+    --black: #333333;
+}
+
+
+/* ==================================
+-- Custom CSS Class Template
+================================== */
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.row-gap-24 {
+    row-gap: 24px;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
+/* ==================================
+-- Nav Menu
+================================== */
+
+/* Nav Logo */
+
+nav .container .nav-logo img {
+    height: 36px;
+}
+
+
+/* Nav Menu */
+
+nav {
+    padding-top: 15px;
+    padding-bottom: 14px;
+    background: var(--nav-background-color);
+}
+
+nav .container .nav-menu ul li a {
+    padding: 11.5px 24px;
+    color: var(--black);
+    font-size: 16px;
+    /*font-weight: 700;*/
+    line-height: 24px;
+    border: 1px solid transparent;
+    transition: all 0.3s linear;
+}
+
+nav .container .nav-menu ul li.active a {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    background: var(--nav-background-color);
+    transform: scale(1.1);
+}
+
+nav .container .nav-menu ul li:hover a {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    background: var(--nav-background-color);
+    transform: scale(1.1);
+}
+
+
+/* Nav Button */
+
+nav .container .nav-btn button {
+    padding: 13px 27px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+
+nav .container .nav-btn button.btn-primary {
+    color: var(--white);
+    background: var(--primary-color);
+}
+
+nav .container .nav-btn button:hover.btn-primary {
+    background: var(--primary-dark-color);
+}
+
+nav .container .nav-btn button:active.btn-primary {
+    background: var(--primary-color);
+}
+
+nav .container .nav-btn button.btn-outlined {
+    color: var(--black);
+    background: var(--nav-background-color);
+}
+
+nav .container .nav-btn button:hover.btn-outlined {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+
+/* ==================================
+-- Home Section
+================================== */
+
+/* Banner Image */
+
+section.banner {
+    position: relative;
+    width: 100%;
+    background: url('./images/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 125px 0 235px;
+    z-index: 1;
+}
+
+section.banner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+
+/* Banner Contents */
+
+section.banner .container {
+    text-align: center;
+}
+
+section.banner .container h5 {
+    color: #F5FAF8;
+    font-size: 24px;
+    line-height: 26px;
+}
+
+section.banner .container h1 {
+    margin: 0 auto;
+    font-size: 85px;
+    line-height: 130%;
+    font-weight: 500;
+    letter-spacing: 0.59px;
+    max-width: 776px;
+    color: var(--white);
+}
+
+section.banner .container h1 span {
+    padding: 12px;
+    color: var(--primary-color);
+    background: var(--white);
+}
+
+section.banner .container p {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 755px;
+    margin: 29px auto 0;
+    color: #f2fffa;
+}
+
+
+/* Banner Appointment Form */
+
+section.banner .appointment-form {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    padding: 16px;
+    width: 875px;
+    border-radius: 10px;
+    background: var(--nav-background-color);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+section.banner .appointment-form .row {
+    display: flex;
+    gap: 24px;
+}
+
+section.banner .appointment-form .row:first-child {
+    margin-bottom: 24px;
+}
+
+section.banner .appointment-form .row select,
+section.banner .appointment-form .row button {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background: transparent;
+}
+
+section.banner .appointment-form .row button {
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: var(--white);
+    background: var(--primary-color);
+}
+
+section.banner .appointment-form .row button:hover {
+    background: var(--primary-dark-color);
+}
+
+section.banner .appointment-form .row button:active {
+    background: var(--primary-color);
+}
+
+
+/* ==================================
+-- About Section
+================================== */
+
+section.about {
+    position: relative;
+    background: #f4fffb;
+    margin-top: 82px;
+    padding: 90px 0;
+}
+
+section.about img.small-bubble,
+section.about img.large-bubble,
+section.about img.small-bubble-2,
+section.about img.large-bubble-2 {
+    opacity: 0.4;
+}
+
+
+/* Bubble Background Images */
+
+section.about .small-bubble,
+section.about .large-bubble {
+    position: absolute;
+}
+
+section.about .small-bubble {
+    left: 47%;
+    top: 25%;
+    animation: roundtwo 5s linear infinite;
+}
+
+@keyframes roundtwo {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+} 
+
+
+section.about .small-bubble-2 {
+    position: absolute;
+    left: 47%;
+    top: 25%;
+    transform: translateX(27%) translateY(24%);
+}
+
+section.about .large-bubble {
+    left: 50%;
+    top: 25%;
+    animation: round 5s linear infinite;
+}
+
+@keyframes round {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+section.about .large-bubble-2 {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(27%) translateY(27%);
+}
+
+/* About Section left Column */
+
+section.about .left {
+    position: relative;
+    height: 560px;
+}
+
+section.about .left .rectangle-image {
+    position: absolute;
+    left: 45px;
+    top: 75px;
+}
+
+section.about .left .staff-image {
+    position: absolute;
+    left: 118px;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+/* CEO Card */
+
+section.about .left .ceo-card {
+    position: absolute;
+    left: 118px;
+    top: 277px;
+    background: #fff;
+    padding: 41px 16px 32px;
+    box-shadow: 8px 8px 6px 0px rgba(110, 110, 110, 0.08);
+    z-index: 3;
+}
+
+section.about .left .ceo-card .ceo-image {
+    position: relative;
+    column-gap: 11px;
+    padding-bottom: 25px;
+}
+
+section.about .left .ceo-card .ceo-image::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 405px;
+    height: 1px;
+    background: #adadad;
+}
+
+section.about .left .ceo-card .title-name h3 {
+    color: #1c1c1c;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+section.about .left .ceo-card .title-name p {
+    color: #838383;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* CEO Card Icons */
+
+section.about .left .ceo-card .title-name .icons i {
+    padding: 15px 0;
+    font-size: 23px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: #adadad;
+}
+
+section.about .left .ceo-card .title-name .icons i:hover {
+    color: var(--primary-color);
+}
+
+section.about .left .ceo-card .title-name .icons {
+    margin-left: 146px;
+}
+
+section.about .left .ceo-card .title-name .icons i.fa-regular.fa-envelope {
+    margin-left: 14px;
+}
+
+
+/* CEO Card Text Contents */
+
+section.about .left .ceo-card .ceo-text-content {
+    max-width: 429px;
+    margin-top: 16px;
+}
+
+section.about .left .ceo-card .ceo-text-content p {
+    color: #6a6a6a;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* Dot Design Image */
+
+section.about .left .dot-design img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+
+/* About Section Right Column */
+
+section.about .right {
+    height: 560px;
+    padding: 99px 0 99px 102px;
+}
+
+section.about .right .contents h3 {
+    margin-bottom: 12px;
+}
+
+
+/* About Section List of Contents */
+
+section.about .right .contents h3 {
+    padding: 16px 57px 16px 22px;
+    line-height: 38px;
+    font-size: 28px;
+    font-weight: 600;
+    border: 1px solid rgba(143, 204, 179, 0.5);
+    border-radius: 10px;
+    color: #0C261A;
+}
+
+section.about .right .contents ul {
+    max-width: 575px;
+    padding: 11px 22px;
+    margin-bottom: 32px;
+    border: 1px solid rgba(143, 204, 179, 0.5);
+    border-radius: 10px;
+}
+
+section.about .right .contents ul li {
+    color: #515854;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+section.about .right .contents ul li i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+
+/* About Section Button */
+
+section.about .right .contents button {
+    padding: 13px 23px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    background: var(--primary-color);
+}
+
+section.about .right .contents button:hover {
+    background: var(--primary-dark-color);
+}
+
+section.about .right .contents button:active {
+    background: var(--primary-color);
+}
+
+
+/* ==================================
+-- Services Section
+================================== */
+
+section.services {
+    position: relative;
+    background: #f4fffb;
+}
+
+
+/* Bubble Background Images */
+
+section.services .service-small-bubble {
+    position: absolute;
+    left: 47%;
+    top: 6%;
+}
+
+section.services .service-large-bubble {
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+
+/* Services Section Contents */
+
+section.services h2 {
+    margin-bottom: 10px;
+    padding-top: 90px;
+    line-height: 36px;
+    font-size: 28px;
+    font-weight: 500;
+    color: #0c261a;
+}
+
+section.services p {
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #515854;
+}
+
+section.services h2, p {
+    max-width: 575px;
+}
+
+
+/* Services Cards */
+
+section.services .container .services-cards {
+    margin-top: 48px;
+    max-width: 1320px;
+    padding-bottom: 90px;
+}
+
+section.services .container .services-cards .row {
+    display: flex;
+    flex-direction: row;
+}
+
+section.services .container .services-cards .row .card {
+    position: relative;
+    width: 312px;
+    height: 374px;
+    padding: 32px 40px 48px 32px;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    background: var(--white);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+section.services .container .services-cards .row .card:hover {
+    background: var(--primary-color);
+}
+
+section.services .container .services-cards .row .card:hover svg path {
+    fill: var(--white);
+}
+
+
+/* Bubble Background */
+
+section.services .container .services-cards .row .card .bubble-background {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+section.services .container .services-cards .row .card:hover svg.bubble-background g circle {
+    fill: #F2FFFA;
+}
+
+/* Card Title */
+
+section.services .container .services-cards .row .card h3 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: #0c261a;
+}
+
+section.services .container .services-cards .row .card:hover h3.card-title {
+    color: var(--white);
+}
+
+
+/* Card Text */
+
+section.services .container .services-cards .row .card h3.card-title, p.card-text {
+    max-width: 239px;
+}
+
+section.services .container .services-cards .row .card:hover p.card-text {
+    color: var(--white);
+}
+
+
+/* Card Button */
+
+section.services .container .services-cards .row .card button.card-btn {
+    margin-top: 24px;
+    padding: 13px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--primary-color);
+}
+
+section.services .container .services-cards .row .card:hover button.card-btn {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+section.services .container .services-cards .row .card:hover button.card-btn:active {
+    background: hsl(0, 0%, 70%);
+}
+
+
+/* ==================================
+-- Work Process Section
+================================== */
+
+section.work-process {
+    position: relative;
+    width: 100%;
+    height: 740px;
+    background: url('./images/banner-2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+
+section.work-process::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+section.work-process .container .work-process-contents {
+    text-align: center;
+}
+
+
+/* Work Process Contents */
+
+section.work-process .container .work-process-contents h3 {
+    padding-top: 232px;
+    margin-bottom: 16px;
+    line-height: 32px;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+section.work-process .container .work-process-contents p {
+    margin: 0 auto;
+    max-width: 553px;
+    font-size: 16px;
+    line-height: 150%;
+    color: #f2fffa;
+}
+
+
+/* Play Icon */
+
+section.work-process .container .work-process-contents img {
+    margin-top: 35px;
+}
+
+
+/* ==================================
+-- Pricing Section
+================================== */
+
+section.pricing {
+    background: var(--white);
+}
+
+section.pricing .container {
+    padding: 90px 0;
+}
+
+
+/* Pricing Contents */
+
+section.pricing .container .pricing-contents {
+    place-items: center;
+}
+
+section.pricing .container .pricing-contents h3 {
+    margin-top: 8px;
+    margin-bottom: 59px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    color: #0c261a;
+}
+
+section.pricing .container .pricing-contents p {
+    margin-top: 11px;
+    line-height: 32px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2B8761;
+}
+
+
+/* Pricing Cards */
+
+section.pricing .container .pricing-cards {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.pricing .container .pricing-cards .pricing-card {
+    width: 424px;
+    height: 517px;
+    padding: 34.5px 40px 0;
+    border: 1px solid hsla(155, 37%, 68%, 0.3);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Pricing Card Button */
+
+section.pricing .container .pricing-cards .pricing-card button {
+    margin-top: 48px;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: var(--primary-color);
+    background: hsla(155, 52%, 35%, 0.1);
+}
+
+section.pricing .container .pricing-cards .pricing-card button:active {
+    background: hsla(155, 52%, 35%, 0.3);
+}
+
+section.pricing .container .pricing-cards .pricing-card .card-container {
+    max-width: 344px;
+}
+
+
+/* Pricing Card Title */
+
+section.pricing .container .pricing-cards .pricing-card .card-container h4 {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    line-height: 160%;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+
+/* Pricing Card Price */
+
+section.pricing .container .pricing-cards .pricing-card .card-container h3 {
+    margin-bottom: 24px;
+    line-height: 42%;
+    font-size: 36px;
+    font-weight: 500;
+    color: #313131;
+}
+
+
+/* Pricing Card Lists */
+
+section.pricing .container .pricing-cards .pricing-card .card-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+section.pricing .container .pricing-cards .pricing-card .card-container ul li {
+    line-height: 26px;
+    font-size: 16px;
+    color: #515854;
+}
+
+
+/* Pricing Card List Icons */
+
+section.pricing .container .pricing-cards .pricing-card .card-container ul li i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+
+/* Pricing Card Active Styles */
+
+section.pricing .container .pricing-cards .pricing-card.active-card {
+    background: #F0FCF7;
+    border: 1px solid var(--primary-color);
+}
+
+section.pricing .container .pricing-cards .pricing-card button.active-btn {
+    background: var(--primary-color);
+    color: #F0FCF7;
+}
+
+section.pricing .container .pricing-cards .pricing-card button.active-btn:active {
+    background: var(--primary-dark-color);
+}
+
+
+/* ==================================
+-- Team Members Section
+================================== */
+
+section.team-members {
+    background: var(--white);
+}
+
+section.team-members .container {
+    padding-top: 18px;
+    padding-bottom: 62px;
+}
+
+
+/* Team Members Contents */
+
+section.team-members .container .team-members-contents {
+    padding-top: 29px;
+}
+
+section.team-members .container .team-members-contents p {
+    margin-bottom: 16px;
+    line-height: 26px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2B8761;
+}
+
+section.team-members .container .team-members-contents h3 {
+    margin-bottom: 43px;
+    line-height: 32px;
+    letter-spacing: 0.25px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0c261a;
+}
+
+
+/* Team Members Cards */
+
+section.team-members .container .team-members-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.team-members .container .team-members-cards .team-members-card {
+    width: 312px;
+    height: 451px;
+    border-radius: 5px;
+}
+
+
+/* Team Members Card Image */
+
+section.team-members .container .team-members-cards .team-members-card img {
+    width: 100%;
+    height: 319px;
+    object-fit: cover;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+/* Team Members Card Title */
+
+section.team-members .container .team-members-cards .team-members-card h4 {
+    margin-top: 16px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s linear;
+    color: #0c261a;
+}
+
+section.team-members .container .team-members-cards .team-members-card:hover h4 {
+    color: var(--primary-color);
+}
+
+
+/* Team Members Card Subtitle */
+
+section.team-members .container .team-members-cards .team-members-card p {
+    line-height: 32px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #69726C;
+}
+
+
+/* Team Members Card Social Icons */
+
+section.team-members .container .team-members-cards .team-members-card .team-members-card-social-icons {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+section.team-members .container .team-members-cards .team-members-card .team-members-card-social-icons i {
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: var(--black);
+    background: hsla(155, 52%, 35%, 0.1);
+}
+
+section.team-members .container .team-members-cards .team-members-card .team-members-card-social-icons i:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+section.team-members .container .team-members-cards .team-members-card .team-members-card-social-icons i:active {
+    background: var(--primary-dark-color);
+}
+
+
+/* ==================================
+-- Blogs Section
+================================== */
+
+section.blogs {
+    position: relative;
+    background: var(--white);
+    padding-top: 63px;
+    padding-bottom: 87px;;
+}
+
+
+/* Bubble Background Images */
+
+section.blogs .service-small-bubble {
+    position: absolute;
+    left: 47%;
+    top: 11%;
+}
+
+section.blogs .service-large-bubble {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+}
+
+
+/* Blogs Contents */
+
+section.blogs .container .blogs-contents p {
+    margin-bottom: 8px;
+    line-height: 150%;
+    font-size: 16px;
+    color: #515854;
+}
+
+section.blogs .container .blogs-contents h3 {
+    margin-bottom: 43px;
+    line-height: 32px;
+    font-size: 28px;
+    font-weight: 500;
+    color: #0c261a;
+}
+
+section.blogs .container .blog-cards .blog-card {
+    width: 313px;
+    height: 436px;
+    padding: 12px;
+    border: 1px solid hsla(155, 37%, 68%, 0.5);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); */
+}
+
+section.blogs .container .blog-cards .blog-card:hover {
+    border: 1px solid hsla(155, 37%, 68%, 0.9);
+}
+
+section.blogs .container .blog-cards .blog-card:hover h4 {
+    color: var(--primary-color);
+}
+
+section.blogs .container .blog-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Blog Card Image */
+
+section.blogs .container .blog-cards .blog-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* Blog Card Title */
+
+section.blogs .container .blog-cards .blog-card h4 {
+    margin-top: 16px;
+    line-height: 34px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s linear;
+    color: #0c261a;
+}
+
+
+/* Blog Card Date */
+
+section.blogs .container .blog-cards .blog-card p.blog-card-date {
+    margin-top: 16px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #515854;
+}
+
+
+/* Blog Card Text */
+
+section.blogs .container .blog-cards .blog-card p.blog-card-text {
+    margin-top: 16px;
+    line-height: 24px;
+    font-size: 16px;
+    color: #515854;
+}
+
+
+/* Blog Card Button */
+
+section.blogs .container .blog-cards .blog-card button {
+    margin-top: 16px;
+    padding: 13px 69px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    background: transparent;
+}
+
+section.blogs .container .blog-cards .blog-card button:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+section.blogs .container .blog-cards .blog-card button:active {
+    background: var(--primary-dark-color);
+}
+
+
+/* ==================================
+-- Apps Section
+================================== */
+
+section.apps {
+    position: relative;
+    background: #E9F5F0;
+}
+
+section.apps .container {
+    padding-top: 52px;
+    padding-left: 88px;
+    padding-bottom: 51px;
+}
+
+section.apps .container .apps-contents {
+    display: flex;
+}
+
+
+/* Bubble Background Images */
+
+section.apps .service-small-bubble {
+    position: absolute;
+    left: 37%;
+    top: 21%;
+}
+
+section.apps .service-large-bubble {
+    position: absolute;
+    left: 41%;
+    top: 12%;
+}
+
+
+/* Mobile Image */
+
+section.apps .container .apps-contents img.mobile-img {
+    width: 462px;
+    height: 562px;
+    object-fit: cover;
+}
+
+
+/* Text Contents */
+
+section.apps .container .apps-contents .text-contents {
+    align-self: center;
+    padding-left: 122px;
+}
+
+section.apps .container .apps-contents .text-contents h3 {
+    margin-bottom: 16px;
+    font-size: 24px;
+    color: #0c261a;
+}
+
+section.apps .container .apps-contents .text-contents p {
+    max-width: 435px;
+    margin-bottom: 16px;
+    line-height: 24px;
+    font-size: 15px;
+    color: #515854;
+}
+
+
+/* Download Buttons */
+
+section.apps .container .apps-contents .text-contents .download-btn button:first-child {
+    margin-right: 16px;
+}
+
+section.apps .container .apps-contents .text-contents .download-btn button img {
+    width: 24px;
+    height: 24px;
+}
+
+section.apps .container .apps-contents .text-contents .download-btn {
+    display: flex;
+}
+
+section.apps .container .apps-contents .text-contents .download-btn button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 23px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: #F2FFFA;
+    background: var(--black);
+}
+
+section.apps .container .apps-contents .text-contents .download-btn button:active {
+    background: #000;
+}
+
+
+/* ==================================
+-- Footer Section
+================================== */
+
+footer {
+    padding-top: 71px;
+    background: var(--white);
+}
+
+footer .footer-contents .footer-top .container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 106px;
+}
+
+
+/* Footer Logo */
+
+footer .footer-contents .footer-top .container .footer-content-1 img {
+    width: 173px;
+    height: 19px;
+}
+
+
+/* Footer Text */
+
+footer .footer-contents .footer-top .container .footer-content-1 p {
+    max-width: 336px;
+    margin-top: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #515854;
+}
+
+
+/* Footer Icons */
+
+footer .footer-contents .footer-top .container .footer-content-1 .footer-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+footer .footer-contents .footer-top .container .footer-content-1 .footer-icons i {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: var(--white);
+    background: #5A5A5A;
+}
+
+footer .footer-contents .footer-top .container .footer-content-1 .footer-icons i:hover {
+    background: var(--primary-color);
+}
+
+footer .footer-contents .footer-top .container .footer-content-1 .footer-icons i:active {
+    background: var(--primary-dark-color);
+}
+
+
+/* Footer Content 2 */
+
+footer .footer-contents .footer-top .container .footer-content-2 h4 {
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #0C261A;
+}
+
+footer .footer-contents .footer-top .container .footer-content-2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+footer .footer-contents .footer-top .container .footer-content-2 ul li a {
+    line-height: 22px;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    color: #515854;
+}
+
+footer .footer-contents .footer-top .container .footer-content-2 ul li a:hover {
+    color: var(--primary-color);
+}
+
+
+/* Footer Content 3 */
+
+footer .footer-contents .footer-top .container .footer-content-3 h4 {
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #0C261A;
+}
+
+footer .footer-contents .footer-top .container .footer-content-3 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+footer .footer-contents .footer-top .container .footer-content-3 ul li a {
+    line-height: 22px;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    color: #515854;
+}
+
+footer .footer-contents .footer-top .container .footer-content-3 ul li a:hover {
+    color: var(--primary-color);
+}
+
+
+/* Footer Content 4 */
+
+footer .footer-contents .footer-top .container .footer-content-4 h4 {
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #0C261A;
+}
+
+footer .footer-contents .footer-top .container .footer-content-4 form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+footer .footer-contents .footer-top .container .footer-content-4 form input {
+    padding: 8px;
+    border: 1px solid #8FCCB3;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #515854;
+}
+
+footer .footer-contents .footer-top .container .footer-content-4 form input:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+}
+
+footer .footer-contents .footer-top .container .footer-content-4 form button {
+    width: 135px;
+    padding: 13px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    background: var(--primary-color);
+}
+
+footer .footer-contents .footer-top .container .footer-content-4 form button:active {
+    background: var(--primary-dark-color);
+}
+
+
+/* Footer Bottom */
+
+footer .footer-contents .footer-bottom {
+    padding-top: 14px;
+    padding-bottom: 16px;
+}
+
+footer .footer-contents .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Left Content */
+
+footer .footer-contents .footer-bottom .container .left-content {
+    display: flex;
+    gap: 26px;
+}
+
+footer .footer-contents .footer-bottom .container .left-content p {
+    line-height: 22px;
+    font-size: 14px;
+    color: #515854;
+}
+
+
+/* Right Content */
+
+footer .footer-contents .footer-bottom .container .right-content {
+    display: flex;
+    gap: 26px;
+}
+
+footer .footer-contents .footer-bottom .container .right-content p a {
+    line-height: 22px;
+    font-size: 14px;
+    color: #515854;
+}
